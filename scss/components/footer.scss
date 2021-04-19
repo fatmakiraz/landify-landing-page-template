@@ -1,0 +1,59 @@
+
+.footer {
+	padding-top: var(--section-spacing);
+	padding-bottom: var(--section-spacing);
+	background-color: #000000;
+	color: #FFFFFF;
+	line-height: 1.625em;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	&__image {
+		margin-bottom: 1.5em;
+	}
+
+	&__links {
+		margin-bottom: .75em;
+
+		&__item+&__item {
+			margin-left: .88em;
+
+			@include mq() {
+				margin-left: 1.5em;
+			}
+		}
+
+	}
+
+	&__menu__links {
+		margin-bottom: 1.5em;
+		display: grid;
+		grid-template-rows: repeat(6, auto);
+		row-gap: .5em;
+
+		@include mq() {
+			grid-template-rows: none;
+			row-gap: 0;
+			grid-template-columns: repeat(6, auto);
+			column-gap: 1.25em;
+		}
+	}
+
+	.cta__badge {
+		display: grid;
+
+		&__title {
+			margin-bottom: .89em;
+		}
+
+		.social {
+			grid-template-rows: 1fr;
+			grid-template-columns: none;
+			row-gap: 1em;
+		}
+	}
+}

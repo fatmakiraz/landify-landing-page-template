@@ -1,0 +1,13 @@
+<div class="nav__item" >
+	<a href="#" title="{{title}}">
+		{{title}}
+	</a>
+	{% if has_child %}	
+	<svg class="icon icon-arrow-down js-nav-item"><use xlink:href="#icon-arrow-down"></use></svg>
+	<div class="nav__item__child js-nav-item-child">
+		{% for i in (1..4) %}
+		<a href="#" title="More Item {{i}}">More Item {{i}}</a>
+		{% endfor %}
+	</div>
+	{% endif %}
+</div>

@@ -1,0 +1,28 @@
+<header class="header js-header">
+	<div class="container">
+		<div class="header__wrapper">
+			<figure class="header__logo">
+				<a href="#" title="Home">
+					<picture>
+						<img loading="lazy" src="img/main-logo.svg" alt="Project Logo">
+					</picture>
+				</a>
+			</figure>
+			<nav class="header__nav">
+				{% assign nav_items = 'About, Products, Pricing, Blog, Jobs' | split : ', ' %}
+				{% for title in nav_items %}
+				{% include 'header/nav-item'%}
+				{% endfor %}
+				{% include 'header/nav-item' with title: "More", has_child: true %}
+				<div class="social">
+					{% include 'social' %}
+				</div>
+			</nav>
+			<button class="header__toggle js-header-toggle" type="button" aria-label="Hamburger menu">
+				<svg class="icon icon-hamburger">
+					<use xlink:href="#icon-hamburger"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+</header>

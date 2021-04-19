@@ -1,0 +1,14 @@
+.social {
+	display: grid;
+	grid-template-columns: 135px 135px;
+	column-gap: .75em;
+	
+&__item {
+
+	img {
+		max-height: 40px;
+		max-width: 135px;
+	}
+
+}
+}

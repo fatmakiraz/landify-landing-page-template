@@ -1,0 +1,28 @@
+.container--brands {
+  padding-top: 1.88em;
+  padding-bottom: 1.88em;
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, rgba(192, 204, 218, 0.1) 0%, rgba(192, 204, 218, 0.6) 50.38%, rgba(192, 204, 218, 0.1) 100%) 1;
+
+
+  @include mq() {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+  }
+
+}
+
+.brands {
+  &__item {
+    text-align: center;
+
+    img {
+      height: 18px;
+
+      @include mq() {
+        height: auto;
+      }
+    }
+  }
+}

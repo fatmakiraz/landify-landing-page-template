@@ -1,0 +1,15 @@
+.features__item {
+	text-align: center;
+	&__image {
+		margin-bottom: 1.5em;
+	}
+	&__title {
+		font-size: 1.5em;
+		font-weight: var(--font-semibold);
+		margin-bottom: .334em;
+	}
+
+	&__desc {
+		line-height: 1.63em;
+	}
+}

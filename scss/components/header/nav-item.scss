@@ -1,0 +1,64 @@
+.nav__item {
+	font-weight: var(--font-bold);
+	display: flex;
+	align-items: center;
+	position: relative;
+	flex-wrap: wrap;
+
+
+	@include mq("desktop") {
+		font-size: .88rem;
+
+		&:hover &__child {
+			display: flex;
+			position: absolute;
+			flex-direction: column;
+			left: 50%;
+			top: 100%;
+			border-bottom-left-radius: var(--border-radius);
+			border-bottom-right-radius: var(--border-radius);
+			box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+			padding: 0.8em;
+			white-space: nowrap;
+			transform: translateX(-50%);
+
+			a+a {
+				margin-top: 0.4em;
+			}
+		}
+	}
+
+	&+& {
+		margin-top: 1.5em;
+
+		@include mq("desktop") {
+			margin-left: 2em;
+			margin-top: 0;
+		}
+	}
+
+	.icon-arrow-down {
+		margin-left: auto;
+		cursor: pointer;
+
+		@include mq("desktop") {
+			margin-left: .5em;
+		}
+	}
+
+	&__child {
+		display: none;
+
+		&.is-active {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+			padding-left: 1.5em;
+
+			a {
+				margin-top: 1.5em;
+			}
+		}
+	}
+
+}

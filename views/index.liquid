@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Landing Page</title>
+	<meta name="description" content="App Landing Page">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	{% include 'svg-icons' %}
+	{% include 'header/header' %}
+	<main class="main">
+		<section class="hero">
+			<div class="hero__bg">
+				<div class="hero__bg__circle"></div>
+				<div class="hero__bg__line hero__bg__line--left-top"></div>
+				<div class="hero__bg__line hero__bg__line--left-bottom"></div>
+				<div class="hero__bg__line hero__bg__line--right-top"></div>
+				<div class="hero__bg__line hero__bg__line--right-center"></div>
+				<div class="hero__bg__line hero__bg__line--right-bottom"></div>
+			</div>
+			<div class="container">
+				<div class="hero__wrapper">
+					<div class="hero__content">
+						<h1 class="hero__content__title">Organise projects.<br>Get more done.</h1>
+						<button type="button" class="button hero__content__button" aria-label="Get started button">Get Started</button>
+					</div>
+					<figure class="hero__image">
+						<picture>
+							<img loading="lazy" src="img/phone-mockup.svg" alt="Hero Photo">
+						</picture>
+					</figure>
+				</div>
+			</div>
+		</section>
+		{% include 'brands-swiper' %}
+		<section class="features">
+			<div class="container">
+				<div class="features__wrapper">
+
+					<div class="features__header">
+						<div class="features__header__title">Tailor-made features</div>
+						<div class="features__header__desc">Lorem ipsum is common placeholder text used to demonstrate the graphic elements of a document or visual presentation.</div>
+					</div>
+					<div class="features__item__wrapper">
+						{% include 'features/item' with image: 'img/features-1.svg', title: 'Robust workflow', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+						{% include 'features/item' with image: 'img/features-2.svg', title: 'Flexibility', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+						{% include 'features/item' with image: 'img/features-3.svg', title: 'User friendly', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+						{% include 'features/item' with image: 'img/features-4.svg', title: 'Multiple layouts', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+						{% include 'features/item' with image: 'img/features-5.svg', title: 'Better components', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+						{% include 'features/item' with image: 'img/features-6.svg', title: 'Well organised', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed erat nibh tristique ipsum.' %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="testimonials">
+			<div class="container">
+				<div class="testimonials__wrapper">
+					<div class="testimonials__wrapper__item testimonials__wrapper__item--left">
+						<svg class="icon icon-quote-mark">
+							<use xlink:href="#icon-quote-mark"></use>
+						</svg>
+						<div class="testimonials__header">
+							<div class="testimonials__header__title">Real Stories from Real Customers</div>
+							<div class="testimonials__header__desc">Get inspired by these stories.</div>
+						</div>
+						{% include 'testimonials/item' with image: 'img/logo-hubspot.svg', comment: 'To quickly start my startup landing page design, I was looking for a landing page UI Kit. Landify is one of the best landing page UI kit I have come across. It’s so flexible, well organised and easily editable.', person_name: 'Floyd Miles', person_degree: 'Vice President, GoPro'  %}
+					</div>
+					<div class="testimonials__wrapper__item testimonials__wrapper__item--right">
+						{% include 'testimonials/item' with image: 'img/logo-airbnb.svg', comment: 'I used landify and created a landing page for my startup within a week. The Landify UI Kit is simple and highly intuitive, so anyone can use it.', person_name: 'Jane Cooper', person_degree: 'CEO, Airbnb'  %}
+						{% include 'testimonials/item' with image: 'img/logo-bookmyshow.svg', comment: 'Landify saved our time in designing my company page.', person_name: 'Kristin Watson', person_degree: 'Co-Founder, BookMyShow'  %}
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="counters">
+			<div class="container">
+				<div class="counters__wrapper">
+					<div class="counters__content">
+						<div class="counters__content__title">Our 18 years of achievements</div>
+						<div class="counters__content__desc">With our super powers we have reached this</div>
+					</div>
+					<div class="counters__numbers__wrapper">
+						{% include 'counters/item' with image: 'img/features-1.svg', number: '10,000+', title: 'Downloads per day' %}
+						{% include 'counters/item' with image: 'img/features-4.svg', number: '2 Million', title: 'Users' %}
+						{% include 'counters/item' with image: 'img/features-5.svg', number: '500+', title: 'Clients' %}
+						{% include 'counters/item' with image: 'img/features-7.svg', number: '140', title: 'Countries' %}
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="about">
+			<div class="container">
+				<div class="about__wrapper">
+					<div class="about__image">
+						<img loading="lazy" src="img/about-mockup.png" alt="Mockup image">
+					</div>
+					<div class="about__content">
+						<div class="about__content__title">Headline</div>
+						<div class="about__content__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Condimentum diam orci pretium a pharetra, feugiat cursus. Dictumst risus, sem egestas odio cras adipiscing vulputate. Nisi, risus in suscipit non. Non commodo volutpat, pharetra, vel.</div>
+						<a href="#" class="about__content__cta" title="Get started">
+							Get started
+							<svg class="icon icon-arrow-right">
+								<use xlink:href="#icon-arrow-right"></use>
+							</svg>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</section>
+		<section class="trends">
+			<div class="container">
+				<div class="trends__wrapper">
+					<div class="trends__content">
+						<div class="trends__content__title">Enter the world of all fashion trends</div>
+						<div class="trends__content__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Venenatis scelerisque at quam congue posuere libero in sit quam. Consequat, scelerisque non tincidunt sit lectus senectus.</div>
+					</div>
+					<figure class="trends__image">
+						<picture>
+							<img loading="lazy" src="img/trends.png" alt="Trends image">
+						</picture>
+					</figure>
+				</div>
+			</div>
+		</section>
+		<section class="cta">
+			<div class="container">
+				<div class="cta__wrapper">
+					<div class="cta__wrapper__item cta__wrapper__item--left">
+						<div class="cta__content__wrapper">
+							<div class="cta__content">
+								<div class="cta__content__title">Manage your projects from your mobile</div>
+								<div class="cta__content__desc">Download the app to manage your projects, keep track of the progress and complete tasks without procastinating. Stay on track and complete on time!</div>
+							</div>
+						</div>
+						<div class="cta__badge">
+							<div class="cta__badge__title">Get the App</div>
+							<nav class="social">
+								{% include 'social' %}
+							</nav>
+						</div>
+					</div>
+					<figure class="cta__wrapper__item cta__wrapper__item--right">
+						<img loading="lazy" src="img/cta-mockup.png" alt="CTA phone image">
+						<img loading="lazy" src="img/cta-mockup-2.png" alt="CTA phone image">
+					</figure>
+				</div>
+			</div>
+		</section>
+	</main>
+	{% include 'footer' %}
+	<script src="js/swiper.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
+
+</html>

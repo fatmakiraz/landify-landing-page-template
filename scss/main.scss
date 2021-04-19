@@ -1,0 +1,20 @@
+@import "vendor/swiper.scss";
+
+@import "config/mixin.scss";
+@import "config/variables.scss";
+
+@import "helpers/formalize.scss";
+@import "helpers/normalize.scss";
+@import "helpers/global.scss";
+
+
+@import "components/brands-swiper.scss";
+@import "components/social.scss";
+@import "components/header/nav-item.scss";
+@import "components/header/header.scss";
+@import "components/footer.scss";
+@import "components/features/item.scss";
+@import "components/testimonials/item.scss";
+@import "components/counters/item.scss";
+
+@import "pages/index.scss";

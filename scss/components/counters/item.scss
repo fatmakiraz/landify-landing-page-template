@@ -1,0 +1,18 @@
+.counters__item {
+	display: flex;
+	align-items: center;
+
+	&__detail {
+		margin-left: 1em;
+
+		&__number {
+			font-size: 1.75em;
+			font-weight: var(--font-extrabold);
+			line-height: 1.43em;
+		}
+
+		&__title {
+			line-height: 1.63em;
+		}
+	}
+}

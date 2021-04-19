@@ -1,0 +1,80 @@
+.header {
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	height: var(--header-height);
+	display: flex;
+	align-items: center;
+	z-index: 2;
+
+	&.is-mobile-show{
+		.header__nav{
+			left: 0;
+			opacity: 1;
+		}
+	}
+
+	&__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include mq("desktop"){
+			justify-content: flex-start;
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		position: absolute;
+		background: #fff;
+		left: -100%;
+		top: 0;
+		padding: var(--gutter);
+		padding-top: calc(var(--header-height) + var(--gutter));
+		border-bottom-left-radius: var(--border-radius);
+		border-bottom-right-radius: var(--border-radius);
+		box-shadow: 0px 10px 20px rgba(41, 41, 42, 0.07);
+		transition: .2s;
+		opacity: 0;
+		z-index: -1;
+
+		@include mq(){
+			padding-top: calc(var(--header-height) + 1em);
+			padding-bottom: 2em;
+		}
+
+		@include mq("desktop") {
+			position: static;
+			flex-direction: row;
+			align-items: center;
+			background-color: transparent;
+			margin-left: 2em;
+			padding: 0;
+			opacity: 1;
+			border-radius: 0;
+			box-shadow: none;
+			z-index: 0;
+		}
+
+
+		.social {
+			margin-top: 1em;
+			@include mq("desktop") {
+				margin-left: auto;
+			}
+		}
+	}
+
+	&__toggle{
+		font-size: 1.5rem;
+		background-color: transparent;
+		outline-color: var(--color-primary);
+		cursor: pointer;
+		@include mq("desktop"){
+			display: none;
+		}
+	}
+}

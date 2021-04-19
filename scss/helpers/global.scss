@@ -1,0 +1,70 @@
+html{
+	overflow-x: hidden;
+	font-size: var(--font-size);
+}
+
+body {
+	font-family: 'Manrope', sans-serif;
+	color: var(--color-black);
+}
+
+a:hover {
+		opacity: .8;
+		transition: .2s;
+}
+
+
+.container {
+	padding-right: var(--gutter);
+	padding-left: var(--gutter);
+	width: 100%;
+
+	@include mq("desktop"){
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	@include mq("extra-desktop"){
+		max-width: 1440px;
+	}
+}
+
+.button {
+	cursor: pointer;
+	outline: none;
+
+	&:hover {
+		opacity: .9;
+		transition: .3s;
+	}
+}
+
+.icon {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+
+	&-arrow-down {
+		width: .75em;
+	}
+
+	&-ios {
+		height: 1.3em;
+	}
+
+	&-quote-mark {
+		width: 8.9375em;
+		height: 7.5em;
+		fill: var(--color-turquoise);
+	  }
+	
+	&-arrow-right {
+		width: 1.375em;
+		fill: #8c30f5;
+	}
+	
+}
